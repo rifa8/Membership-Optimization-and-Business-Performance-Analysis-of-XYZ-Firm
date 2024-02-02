@@ -8,8 +8,8 @@ def main():
 
 def read_data():
     file_path = '/opt/airflow/dataset/order_details.csv'
-    df = pd.read_csv(file_path)
-    return df
+    data = pd.read_csv(file_path).fillna(0)
+    return data
 
 def load_data_to_postgres():
     # Get postgres connection from airflow
@@ -20,10 +20,10 @@ def load_data_to_postgres():
     CREATE TABLE IF NOT EXISTS membership (
         membership_id INT PRIMARY KEY,
         membership_amount INT,
-        currency INT,
+        currency TEXT,
         renewal_cycle INT,
         membership_plan INT,
-        creation_date INT,
+        creation_date TEXT,
         email TEXT,
         company TEXT,
         billing_address TEXT,
