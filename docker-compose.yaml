@@ -57,7 +57,7 @@ services:
 
   data_warehouse_postgres:
     image: postgres:13
-    container_name: data_warehouse_db
+    container_name: warehouse_db
     environment:
       POSTGRES_USER: warehouse_user
       POSTGRES_PASSWORD: warehouse_password
@@ -220,7 +220,7 @@ services:
       - airflow_network
   
   metabase:
-    container_name: metabase
+    container_name: data_viz
     depends_on:
       - data_warehouse_postgres
     image: metabase/metabase # Dockerfile we created for metabase
