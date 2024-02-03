@@ -3,7 +3,16 @@ import pandas as pd
 
 #  Main function that orchestrates the Extract and Load process, so this scripts can be callabe
 def main():
+    read_data()
     load_data_to_postgres()
+
+def read_data():
+    file_path = 'dataset/membership_transactions.sql'
+    with open(file_path, 'r', encoding='utf-8-sig') as file:
+        data = file.read()
+        queries = data.replace('`', '')
+        query = queries.replace(';\nINSERT INTO `membership_transactions` (`charge_amount`, `currency`, `membership_id`, `description_event`, `discount`, `status`, `message`, `transaction_date`, `triggered_by`, `payment_method`) VALUES', ',')
+    return query
 
 def load_data_to_postgres():
     # Get postgres connection from airflow
@@ -13,9 +22,9 @@ def load_data_to_postgres():
     create_table_query = '''
     CREATE TABLE IF NOT EXISTS membership_transactions (
         transaction_id SERIAL PRIMARY KEY,
-        charge_amount FLOAT,
+        charge_amount TEXT,
         currency TEXT,
-        membership_id INT REFERENCES membership(membership_id),
+        membership_id INT,
         description_event TEXT,
         discount INT,
         status TEXT,
@@ -26,10 +35,13 @@ def load_data_to_postgres():
     )
     '''
     # Execute SQL scripts
-    path = 'dataset/membership_transactions.sql'
-    pg_hook.run(path)
     pg_hook.run(create_table_query)
-
-    #close connection
     pg_hook.get_conn().commit()
+
+    # Insert data with one query
+    insert_data_query = read_data() 
+    pg_hook.run(insert_data_query)
+    pg_hook.get_conn().commit()
+    
+    #close connection
     pg_hook.get_conn().close()

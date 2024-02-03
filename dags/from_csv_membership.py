@@ -7,7 +7,7 @@ def main():
     load_data_to_postgres()
 
 def read_data():
-    file_path = '/opt/airflow/dataset/order_details.csv'
+    file_path = '/opt/airflow/dataset/membership.csv'
     data = pd.read_csv(file_path).fillna(0)
     return data
 
@@ -33,11 +33,13 @@ def load_data_to_postgres():
     '''
     # Execute SQL scripts
     pg_hook.run(create_table_query)
-
+    pg_hook.get_conn().commit()
+    
     data = read_data()
 
     # Specify the columns to be used as the primary key
     index_columns = ['membership_id']
+
 
     # Use the to_sql method to insert data into PostgreSQL
     data.to_sql('membership', con=pg_hook.get_sqlalchemy_engine(), index=False, if_exists='replace', method='multi', chunksize=1000)
