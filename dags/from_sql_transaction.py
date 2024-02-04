@@ -11,8 +11,7 @@ def read_data():
     with open(file_path, 'r', encoding='utf-8-sig') as file:
         data = file.read()
         queries = data.replace('`', '')
-        query = queries.replace(';\nINSERT INTO `membership_transactions` (`charge_amount`, `currency`, `membership_id`, `description_event`, `discount`, `status`, `message`, `transaction_date`, `triggered_by`, `payment_method`) VALUES', ',')
-    return query
+    return queries
 
 def load_data_to_postgres():
     # Get postgres connection from airflow
