@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_log
+    columns:
+      - name: 
+        tests:
+          - 
+      - name: 
+        description: 
+        tests:
+          - 
+      - name: 
+        tests:
+          - 
+
+  - name: dim_membership
+    columns:
+      - name: 
+        tests:
+          - 
+          - 
+      - name: 
+        tests:
+          - 
+      - name: 
+        tests:
+          - 
+
+  - name: dim_transaction
+    columns:
+      - name: 
+        tests:
+          - 
+          - 
+      - name: 
+        tests:
+          - 
+      - name: 
+        tests:
+          - 
+      - name: 
+        tests:
+          - 

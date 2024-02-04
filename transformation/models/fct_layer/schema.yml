@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fct_table
+    description: "fact_table"
+    columns:
+      - name: 
+        tests:
+          - 
+          - 
+     
