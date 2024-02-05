@@ -19,4 +19,4 @@ SELECT
     triggered_by,
     payment_method
 FROM 
-   {{ ref ('membership_transactions')}}
+   {{ref ('membership_transactions')}}

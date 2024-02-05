@@ -64,3 +64,7 @@ ALTER TABLE public.membership ALTER COLUMN creation_date TYPE date USING creatio
  --Ganti tipe data
  ALTER TABLE public.membership ALTER COLUMN membership_id TYPE int USING membership_id::int;
 
+ -- Menetapkan kolom sebagai primary key
+ALTER TABLE membership
+ADD PRIMARY KEY (membership_id);
+

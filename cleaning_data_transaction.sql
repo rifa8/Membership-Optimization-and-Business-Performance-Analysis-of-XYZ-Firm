@@ -109,6 +109,12 @@ FROM membership_transactions mt ;
 ALTER TABLE membership_transactions
 ADD COLUMN transaction_id SERIAL;
 
+-- Menetapkan foreign key yang merujuk ke primary key di tabel referensi
+ALTER TABLE membership_transactions
+ADD CONSTRAINT membership_id
+FOREIGN KEY (membership_id)
+REFERENCES membership(membership_id);
+
 
 
 

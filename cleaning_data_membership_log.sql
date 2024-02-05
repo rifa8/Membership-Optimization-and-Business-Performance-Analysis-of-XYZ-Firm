@@ -192,3 +192,9 @@ ALTER COLUMN log_creation_time TYPE date USING log_creation_time::date;
 -- tambahkan log_id
 ALTER TABLE membership_log
 ADD COLUMN log_id SERIAL;
+
+-- Menetapkan foreign key yang merujuk ke primary key di tabel referensi
+ALTER TABLE membership_log
+ADD CONSTRAINT membership_id
+FOREIGN KEY (membership_id)
+REFERENCES membership(membership_id);
