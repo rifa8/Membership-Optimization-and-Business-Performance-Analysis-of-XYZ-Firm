@@ -1,5 +1,4 @@
 SELECT
-    transaction_id,
     membership_id,
     CASE
         WHEN currency ='EUR' THEN charge_amount*1.1
@@ -14,7 +13,6 @@ SELECT
         ELSE currency
     END AS currency,
     description_event,
-    discount,
     status,
     message,
     transaction_date,

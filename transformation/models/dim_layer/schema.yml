@@ -29,16 +29,30 @@ models:
 
   - name: dim_transaction
     columns:
-      - name: 
+      - name: membership_id
         tests:
-          - 
-          - 
-      - name: 
+          - not_null
+      - name: charge_amount
         tests:
-          - 
-      - name: 
+          - not_null
+      - name: currency
         tests:
-          - 
-      - name: 
+          - not_null
+      - name: description_event
         tests:
-          - 
+          - not_null
+      - name: status
+        tests:
+          - not_null
+      - name: message
+        tests:
+          - not_null
+      - name: transaction_date
+        tests:
+          - not_null
+      - name: triggered_by
+        tests:
+          - not_null
+      - name: payment_method
+        tests:
+          - not_null
