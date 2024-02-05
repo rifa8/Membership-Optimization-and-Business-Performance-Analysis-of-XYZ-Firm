@@ -3,29 +3,77 @@ version: 2
 models:
   - name: dim_log
     columns:
-      - name: 
+      - name: membership_id
         tests:
-          - 
-      - name: 
+          - not_null
+      - name: event_name
         description: 
         tests:
-          - 
-      - name: 
+          - not_null
+      - name: upsell_date
         tests:
-          - 
+          - not_null
+      - name: new_renewal_cycle
+        tests:
+          - not_null
+      - name: membership_amount
+        tests:
+          - not_null
+      - name: currency
+        tests:
+          - not_null
+      - name: renews_at
+        tests:
+          - not_null
+      - name: new_plan
+        tests:
+          - not_null
+      - name: churn_date
+        tests:
+          - not_null
+      - name: cancellation_date
+        tests:
+          - not_null
+      - name: log_creation_time
+        tests:
+          - not_null
 
   - name: dim_membership
     columns:
-      - name: 
+      - name: membership_id
         tests:
-          - 
-          - 
-      - name: 
+          - not_null
+      - name: membership_amount
+        description: 
         tests:
-          - 
-      - name: 
+          - not_null
+      - name: currency
         tests:
-          - 
+          - not_null
+      - name: renewal_cycle
+        tests:
+          - not_null
+      - name: membership_plan
+        tests:
+          - not_null
+      - name: creation_date
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: company
+        tests:
+          - not_null
+      - name: billing_address
+        tests:
+          - not_null
+      - name: key_account_manager
+        tests:
+          - not_null
+      - name: animation_team
+        tests:
+          - not_null
 
   - name: dim_transaction
     columns:

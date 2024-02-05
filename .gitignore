@@ -3,3 +3,4 @@ logs
 plugins
 *__pycache__
 transformation/logs
+.venv
