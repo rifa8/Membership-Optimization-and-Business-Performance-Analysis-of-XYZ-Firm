@@ -16,7 +16,7 @@ default_args = {
 }
 # Define the DAG
 dag = DAG(
-    'ELT_dag',
+    'Extract_Load_DAG',
     default_args=default_args,
     description='ELT DAG to run many task',
     schedule_interval=None,
@@ -50,4 +50,4 @@ end_operator = DummyOperator(
     dag=dag,
 )
 # Create Task Dependencies
-start_operator >> ingest_membership >> [ingest_membership_log, ingest_transaction] >> end_operator
+start_operator >> ingest_membership >> ingest_membership_log >> ingest_transaction >> end_operator

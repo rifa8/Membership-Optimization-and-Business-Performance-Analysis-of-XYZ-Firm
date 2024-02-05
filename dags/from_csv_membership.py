@@ -8,7 +8,7 @@ def main():
 
 def read_data():
     file_path = '/opt/airflow/dataset/membership.csv'
-    data = pd.read_csv(file_path).fillna(0)
+    data = pd.read_csv(file_path)
     return data
 
 def load_data_to_postgres():

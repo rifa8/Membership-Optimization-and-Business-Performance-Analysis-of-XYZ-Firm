@@ -21,7 +21,6 @@ def load_data_to_postgres():
     # Define SQL script to create table in postgres
     create_table_query = '''
     CREATE TABLE IF NOT EXISTS membership_log (
-        log_id SERIAL PRIMARY KEY,
         event_name TEXT,
         upsell_date TEXT,
         new_renewal_cycle INT,
@@ -39,9 +38,6 @@ def load_data_to_postgres():
     pg_hook.run(create_table_query)
 
     data = read_data()
-
-    # Specify the columns to be used as the primary key
-    index_columns = ['log_id']
 
     # Use the to_sql method to insert data into PostgreSQL
     data.to_sql('membership_log', con=pg_hook.get_sqlalchemy_engine(), index=False, if_exists='replace', method='multi', chunksize=1000)

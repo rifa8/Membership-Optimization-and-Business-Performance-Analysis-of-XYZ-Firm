@@ -20,7 +20,6 @@ def load_data_to_postgres():
     # Define SQL script to create table in postgres
     create_table_query = '''
     CREATE TABLE IF NOT EXISTS membership_transactions (
-        transaction_id SERIAL PRIMARY KEY,
         charge_amount TEXT,
         currency TEXT,
         membership_id INT,
