@@ -60,3 +60,7 @@ ALTER TABLE public.membership ALTER COLUMN creation_date TYPE date USING creatio
 
 -- Cek nilai unik di tabel animation_team
  select distinct(animation_team) from membership m;
+
+ --Ganti tipe data
+ ALTER TABLE public.membership ALTER COLUMN membership_id TYPE int USING membership_id::int;
+

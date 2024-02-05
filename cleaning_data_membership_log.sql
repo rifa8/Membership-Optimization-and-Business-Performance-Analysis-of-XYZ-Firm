@@ -188,3 +188,7 @@ FROM membership_log;
 --ubah tipe kolom menjadi date
 ALTER TABLE membership_log
 ALTER COLUMN log_creation_time TYPE date USING log_creation_time::date;
+
+-- tambahkan log_id
+ALTER TABLE membership_log
+ADD COLUMN log_id SERIAL;
