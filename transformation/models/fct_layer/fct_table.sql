@@ -1,0 +1,40 @@
+SELECT
+    m.membership_id,
+    m.membership_amount,
+    m.currency,
+    m.renewal_cycle,
+    m.membership_plan,
+    m.creation_date,
+    m.email,
+    m.company,
+    m.billing_address,
+    m.key_account_manager,
+    m.animation_team,
+    l.event_name,
+    l.upsell_date,
+    l.new_renewal_cycle,
+    l.membership_amount as membership_amount_log,
+    l.currency as log_currency
+    l.renews_at,
+    l.new_plan,
+    l.churn_date,
+    l.cancellation_date,
+    l.log_creation_time,
+    t.charge_amount,
+    t.currency as transaction_currency
+    t.description_event,
+    t.status,
+    t.message,
+    t.transaction_date,
+    t.triggered_by,
+    t.payment_method
+FROM membership AS m
+JOIN membership_log AS l
+    ON m.membership_id = l.membership_id 
+JOIN membership_transactions AS t
+    ON m.membership_id = t.membership_id
+-- FROM {{ source ('dim_membership', 'dim_membership')}} AS m
+-- JOIN {{ source ('dim_log', 'membership_log')}} AS l
+--     ON m.membership_id = l.membership_id 
+-- JOIN {{ source ('dim_transaction', 'dim_transaction')}} AS t
+--     ON m.membership_id = t.membership_id

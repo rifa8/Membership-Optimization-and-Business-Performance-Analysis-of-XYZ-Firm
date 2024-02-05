@@ -7,7 +7,6 @@ models:
         tests:
           - not_null
       - name: event_name
-        description: 
         tests:
           - not_null
       - name: upsell_date
@@ -44,7 +43,6 @@ models:
         tests:
           - not_null
       - name: membership_amount
-        description: 
         tests:
           - not_null
       - name: currency

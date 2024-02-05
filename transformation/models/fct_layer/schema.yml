@@ -4,8 +4,92 @@ models:
   - name: fct_table
     description: "fact_table"
     columns:
-      - name: 
+      - name: membership_id
         tests:
-          - 
-          - 
-     
+          - not_null
+          - unique
+      - name: membership_amount
+        tests:
+          - not_null
+      - name: currency
+        tests:
+          - not_null
+      - name: renewal_cycle
+        tests:
+          - not_null
+      - name: membership_plan
+        tests:
+          - not_null
+      - name: creation_date
+        tests:
+          - not_null
+      - name: email
+        tests:
+          - not_null
+      - name: company
+        tests:
+          - not_null
+      - name: billing_address
+        tests:
+          - not_null
+      - name: key_account_manager
+        tests:
+          - not_null
+      - name: animation_team
+        tests:
+          - not_null
+      - name: event_name
+        tests:
+          - not_null
+      - name: upsell_date
+        tests:
+          - not_null
+      - name: new_renewal_cycle
+        tests:
+          - not_null
+      - name: membership_amount_log
+        tests:
+          - not_null
+      - name: log_currency
+        tests:
+          - not_null
+      - name: renews_at
+        tests:
+          - not_null
+      - name: new_plan
+        tests:
+          - not_null
+      - name: churn_date
+        tests:
+          - not_null
+      - name: cancellation_date
+        tests:
+          - not_null
+      - name: log_creation_time
+        tests:
+          - not_null
+      - name: charge_amount
+        tests:
+          - not_null
+      - name: transaction_currency
+        tests:
+          - not_null
+      - name: description_event
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+      - name: message
+        tests:
+          - not_null
+      - name: transaction_date
+        tests:
+          - not_null
+      - name: triggered_by
+        tests:
+          - not_null
+      - name: payment_method
+        tests:
+          - not_null
+  
