@@ -1,4 +1,4 @@
-# ETL_and_Data_Viz
+# XYZ Firm Project
 This Repo is demonstration ETL and data viz
 
 # Backgroud
