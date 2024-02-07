@@ -17,7 +17,11 @@ SELECT
     creation_date,
     email,
     company,
-    billing_address,
+    CONCAT(SPLIT_PART(billing_address, ', ', 1),', ',SPLIT_PART(billing_address, ', ', 2)) AS street_address,
+    SPLIT_PART(billing_address, ', ', 3) AS postcode,
+    SPLIT_PART(billing_address, ', ', 4) AS city,
+    SPLIT_PART(billing_address, ', ', 5) AS state,
+    SPLIT_PART(billing_address, ', ', 6) AS country
     key_account_manager,
     animation_team
 FROM membership
