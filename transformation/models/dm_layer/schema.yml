@@ -1,27 +1,41 @@
-# version: 2
+version: 2
 
-# models:
-#   - name: dm_growth_membership
-#     description: Ascertain the growth and historical data of memberships for PT. XYZ over the provided time frame.
-#     columns:
-#       - name: year
-#         tests:
-#           - not_null
-#       - name: member
-#         description: 
-#         tests:
-#           - not_null
-#   - name: dm_churn_rate
-#     description: Calculate the churn rate
-#     columns:
-#       - name: 
-#         description: 
-#         tests:
-#           - not_null
-#       - name: 
-#         description: 
-#         tests:
-#           - not_null
+models:
+  - name: dm_growth_membership
+    columns:
+      - name: year
+        tests:
+          - not_null
+      - name: member
+        tests:
+          - not_null
+
+  - name: dm_churn_rate
+    columns:
+      - name: year 
+        tests:
+          - not_null
+      - name: member 
+        tests:
+          - not_null
+          
+  - name: dm_distribution_member
+    columns:
+      - name: country 
+        tests:
+          - not_null
+      - name: state 
+        tests:
+          - not_null
+      - name: key_account_manager
+        tests:
+          - not_null
+      - name: membership_plan
+        tests:
+          - not_null
+      - name: membership_count
+        tests:
+          - not_null
 
 
   
