@@ -1,24 +1,27 @@
-# version: 2
+version: 2
 
-# models:
-#   - name: 
-#     description: 
-#     columns:
-#       - name: 
-#         description: 
-#         tests:
-#           - 
-#       - name: 
-#         description: 
-#         tests:
-#           - 
-#       - name: 
-#         description: 
-#         tests:
-#           - 
-#       - name: 
-#         description: 
-#         tests:
-#           - 
+models:
+  - name: dm_growth_membership
+    description: Ascertain the growth and historical data of memberships for PT. XYZ over the provided time frame.
+    columns:
+      - name: year
+        tests:
+          - not_null
+      - name: member
+        description: 
+        tests:
+          - not_null
+  - name: dm_churn_rate
+    description: Calculate the churn rate
+    columns:
+      - name: 
+        description: 
+        tests:
+          - not_null
+      - name: 
+        description: 
+        tests:
+          - not_null
+
 
   

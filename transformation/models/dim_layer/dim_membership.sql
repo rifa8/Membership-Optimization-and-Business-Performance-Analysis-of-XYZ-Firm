@@ -21,7 +21,7 @@ SELECT
     SPLIT_PART(billing_address, ', ', 3) AS postcode,
     SPLIT_PART(billing_address, ', ', 4) AS city,
     SPLIT_PART(billing_address, ', ', 5) AS state,
-    SPLIT_PART(billing_address, ', ', 6) AS country
+    SPLIT_PART(billing_address, ', ', 6) AS country,
     key_account_manager,
     animation_team
 FROM membership
