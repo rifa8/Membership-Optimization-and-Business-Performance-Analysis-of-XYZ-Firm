@@ -7,7 +7,7 @@ models:
       - name: membership_id
         tests:
           - not_null
-          - unique
+          # - unique it cant be use because many id do many transaction
       - name: membership_amount
         tests:
           - not_null
