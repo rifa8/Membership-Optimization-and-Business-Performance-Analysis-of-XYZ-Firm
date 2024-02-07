@@ -84,7 +84,8 @@ WHERE upsell_date <> '';
 -- ubah tipe data
 -- ALTER TABLE membership_log
 -- ALTER COLUMN upsell_date TYPE date USING upsell_date::date;
-
+ALTER TABLE membership_log
+ALTER COLUMN upsell_date TYPE date USING upsell_date::date;
 
 -- cek new_renewal_cycle
 SELECT

@@ -25,7 +25,7 @@ dm_layer:
   outputs:
     dm_layer:
       dbname: data_warehouse
-      host: localhost
+      host: host.docker.internal
       pass: warehouse_password
       port: 5433
       schema: datamart
@@ -36,7 +36,7 @@ transformation:
   outputs:
     dev:
       dbname: data_warehouse
-      host: localhost
+      host: host.docker.internal
       pass: warehouse_password
       port: 5433
       schema: dbt

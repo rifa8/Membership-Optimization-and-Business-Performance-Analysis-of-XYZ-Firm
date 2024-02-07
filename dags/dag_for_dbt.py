@@ -17,7 +17,7 @@ with DAG(
 
     start = DummyOperator(task_id="start")
     # Set DBT/data model path
-    local_path = "/c/Users/USER/GIT/SoloLearn/ELT-demo/transformation" #Ganti sesuai dengan folder yang ada folder model
+    local_path = "/c/Users/USER/GIT/SoloLearn/ETL_and_Data_Viz/transformation" #Ganti sesuai dengan folder yang ada folder model
     
     # Define a DockerOperator for running the dbt debug command
     dbt_debug = DockerOperator(
