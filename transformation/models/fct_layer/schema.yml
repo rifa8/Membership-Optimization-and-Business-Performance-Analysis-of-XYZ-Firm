@@ -29,7 +29,19 @@ models:
       - name: company
         tests:
           - not_null
-      - name: billing_address
+      - name: street_address
+        tests:
+          - not_null
+      - name: postcode
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: state
+        tests:
+          - not_null
+      - name: country
         tests:
           - not_null
       - name: key_account_manager
