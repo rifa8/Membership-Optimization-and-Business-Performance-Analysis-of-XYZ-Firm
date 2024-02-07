@@ -5,3 +5,4 @@ plugins
 transformation/logs
 .venv
 target
+airbyte/postgre-data/
