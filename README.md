@@ -46,8 +46,6 @@ Next, you can access Metabase at localhost:3000. Configure the connection to the
 Unleash your imagination and creativity to visualize data using Metabase.
 
 
-# 💻 Visualization Sample
-
 # 🧔 Author
 
 - Charis Chakim [![Github Badge](https://img.shields.io/badge/Github-black?logo=github)](https://github.com/CharisChakim)
