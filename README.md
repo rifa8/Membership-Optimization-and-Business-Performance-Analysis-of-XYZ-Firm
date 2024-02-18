@@ -24,10 +24,6 @@ PT. XYZ specializes in providing video animation consultation services to its pr
 <img alt="Metabase" src ="https://img.shields.io/badge/Metabase-509EE3.svg?logo=Metabase&logoColor=white">
 <img alt ="Discord" src ="https://img.shields.io/badge/Discord-5865F2.svg?logo=Discord&logoColor=white">
 
-# 🚀 ELT Process
-
-# 📍 ERD
-
 # 🏃 Run Locally
 
 Clone the project
