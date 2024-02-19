@@ -24,6 +24,10 @@ PT. XYZ specializes in providing video animation consultation services to its pr
 <img alt="Metabase" src ="https://img.shields.io/badge/Metabase-509EE3.svg?logo=Metabase&logoColor=white">
 <img alt ="Discord" src ="https://img.shields.io/badge/Discord-5865F2.svg?logo=Discord&logoColor=white">
 
+# 🚀 ELT Process
+
+# 📍 ERD
+
 # 🏃 Run Locally
 
 Clone the project
@@ -45,6 +49,8 @@ You can run/trigger the Extract_Load_DAG first then dag_dbt after configure it w
 Next, you can access Metabase at localhost:3000. Configure the connection to the PostgreSQL data warehouse.
 Unleash your imagination and creativity to visualize data using Metabase.
 
+
+# 💻 Visualization Sample
 
 # 🧔 Author
 
