@@ -7,11 +7,11 @@ import sys
 sys.path.insert(0,"/root/airflow/dags/")
 import from_sql_transaction as t
 
-membership_conn_id = 'bc9c8605-e941-43b7-9a90-3f89510d8825' #ganti dengan connection ID pada airbyte
-log_conn_id = '96238542-972f-41e4-9fc4-8c343ad9ad09' #ganti dengan connection ID pada airbyte
+membership_conn_id = '6a7b4562-2876-41e3-9644-ac65a9b52367' #replace with Airbyte Connection ID
+log_conn_id = '56e2abf1-9b02-4371-b94f-e2bf3353ce77'        #replace with Airbyte Connection ID
 
 with DAG (
-    dag_id='sync_dag',
+    dag_id='Extract_Load_DAG',
     default_args={'owner': 'airflow'},
     schedule=None,
     start_date=days_ago(1)
